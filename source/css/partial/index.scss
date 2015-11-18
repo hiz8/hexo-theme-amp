@@ -1,0 +1,26 @@
+#pagination {
+    @extend .clearfix;
+    font-size: 1.4rem;
+    a {
+        display: inline-block;
+        font-weight: bold;
+    }
+    .prev {
+        float: left;
+        &::before {
+            display: inline-block;
+            margin-right: .5rem;
+            content: '«';
+            text-align: center;
+        }
+    }
+    .next {
+        float: right;
+        &::after {
+            display: inline-block;
+            margin-left: .5rem;
+            content: '»';
+            text-align: center;
+        }
+    }
+}

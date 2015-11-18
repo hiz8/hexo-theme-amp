@@ -1,0 +1,12 @@
+#footer {
+    padding: 3rem 1rem;
+    color: color(sub);
+    font-size: 1.2rem;
+    margin: auto;;
+    max-width: $width;
+    small {
+        display: inline-block;
+        font-size: inherit;
+        margin-left: 1rem;
+    }
+}

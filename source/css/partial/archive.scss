@@ -1,0 +1,49 @@
+.archive-title {
+    color: color(sub);
+    font-weight: normal;
+    font-size: 2.5rem;
+}
+
+.search {
+    input {
+        box-sizing: border-box;
+        padding: 1rem 1rem;
+        width: 100%;
+        border: 1px solid color(border);
+        color: color(sub);
+        font-size: 1.6rem;
+        &:focus {
+            border-color: color(main);
+        }
+    }
+}
+
+.widget {
+    margin-bottom: 30px;
+    ul.entry {
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        line-height: 2;
+        li {
+            float: left;
+            margin-right: 30px;
+        }
+    }
+    &.tag {
+        small {
+            margin-left: 2px;
+            color: color(sub);
+            &::before {
+                padding-right: 2px;
+                content: '(';
+            }
+            &::after {
+                padding-left: 2px;
+                content: ')';
+            }
+        }
+    }
+}

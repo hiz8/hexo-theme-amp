@@ -1,0 +1,25 @@
+
+// Layout
+
+$width: 740px;
+
+
+// Color
+
+$color-map : (
+    main : #FF837B,
+    sub : #362F3C,
+    border : #7C848C
+);
+
+@function color($name) {
+    @return map-get($color-map, $name)
+}
+
+
+// Font
+
+$font-default: 'Helvetica Neue', 'Helvetica', 'Arial', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, sans-serif;
+$font-serif: Georgia, "Times New Roman", serif;
+$font-sans: $font-default;
+$font-mono: Monaco, Menlo, Consolas, "Courier New", monospace;

@@ -1,0 +1,190 @@
+
+#content {
+    margin: auto;
+    max-width: $width;
+    padding: 0 1rem;
+}
+
+article {
+    margin-bottom: 6rem;
+    font-size: 1.6rem;
+    
+    &.link {
+        .title {
+            margin: 1rem 0;
+        }
+    }
+
+    header {
+        .meta {
+            overflow: hidden;
+            height: 20px;
+            text-align: center;
+            time {
+                display: block;
+                float: left;
+                height: 100%;
+                a {
+                    display: block;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    color: inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            font-family: $font-sans;
+            a {
+                color: inherit;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .entry {
+        padding-top: 1rem;
+        margin-bottom: 15px;
+        line-height: 2;
+        font-family: $font-sans;
+
+        p, blockquote, ul, ol, dl, table, iframe, h3, h4, h5, h6, .video-container {
+            margin-top: 15px
+        }
+
+        blockquote {
+            margin: 1.5rem .5rem;
+            padding: 0 20px;
+            border-left: 1px solid color(main);
+            font-family: $font-serif;
+            footer {
+                margin: 20px 0 0;
+                padding-top: 0;
+                border-top: none;
+                font-size: 0.8em;
+                line-height: 1;
+                color: #4E5359;
+                cite {
+                    &::before {
+                        padding: 0 0.5em;
+                        color: #ccc;
+                        content: '—';
+                    }
+                }
+            }
+        }
+
+        code, pre {
+            font-family: $font-mono
+        }
+
+        code {
+            margin: 0 2px;
+            padding: 0 5px;
+            border: 1px solid color(border);
+            border-radius: 3px;
+            background: #f9f9f9;
+            color: #666;
+            font-size: 0.9em;
+        }
+        pre {
+            overflow: auto;
+            padding: 7px 15px;
+            border: 1px solid color(border);
+            code {
+                margin: 0;
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                background: none;
+            }
+        }
+
+        ul, ol, dl {
+            margin-left: 20px;
+            padding: 0;
+            ul, ol, dl {
+                margin-top: 0
+            }
+        }
+
+        h1, h2 {
+            margin-top: 1.5em;
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        h3, h4, h5, h6 {
+            font-weight: normal;
+            line-height: 1;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+            border: none;
+        }
+
+        iframe {
+            border: none
+        }
+
+        .caption {
+            position: relative;
+            display: block;
+            margin-top: 5px;
+            padding-left: 25px;
+            color: color(sub);
+            font-size: 0.9em;
+        }
+
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 30px;
+            padding-bottom: 56.25%;
+            height: 0;
+            iframe, object, embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .pullquote {
+            float: right;
+            margin: 1em 0 0.5em 1.5em;
+            padding: 0;
+            width: 45%;
+            border: none;
+            text-align: left;
+            font-size: 1.5em;
+        }
+
+        table {
+            border-collapse: collapse;
+            td {
+                padding: 2px 10px;
+                border: 1px solid color(border);
+            }
+        }
+    }
+
+    footer {
+        padding: 10px 0;
+        border-bottom: 2px solid color(main);
+        > div {
+            margin: 10px 0;
+        }
+        a {
+            padding-right: 1rem;
+        }
+    }
+}

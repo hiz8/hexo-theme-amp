@@ -1,0 +1,9 @@
+menu:
+  home: /
+  archive: /archives
+
+google_analytics: UA-12345678-1
+
+node_sass:
+  sourceComments: false
+  outputStyle: compact

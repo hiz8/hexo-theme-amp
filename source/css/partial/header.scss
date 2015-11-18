@@ -1,0 +1,62 @@
+$margin: 15px;
+
+#header {
+    border-top: 5px solid color(main);
+    padding: 5rem 1rem;
+    margin: auto;
+    max-width: $width;
+    #logo {
+        text-align: center;
+        h1 {
+            font-family: $font-sans;
+            display: inline-block;
+            margin: 0 0 3.5rem;
+            font-size: 2.5rem;
+        }
+        h2 {
+            margin: $margin 0;
+        }
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+#menu {
+    overflow: hidden;
+    ul {
+        text-align: center;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            margin: 0 1rem;
+            a {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 35.5em) {
+    #header {
+        padding-left: 0;
+        padding-right: 0;
+        display: flex;
+        align-items: center;
+        #logo {
+            text-align: left;
+            margin-right: auto;
+            h1 {
+                margin: 0;
+            }
+        }
+    }
+    #menu {
+        float: right;
+    }
+}
