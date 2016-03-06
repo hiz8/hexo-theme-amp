@@ -3,6 +3,8 @@ hexo-theme-amp
 
 A simple Hexo template on AMP ⚡ HTML.
 
+[DEMO](http://hirofumii.github.io/hexo-theme-amp/)
+
 
 Features
 --------
