@@ -21,19 +21,19 @@
 	<article class="{{ item.layout }}">
 		<div class="post-content">
 			<header>
-				<div class="meta">
-					<div class="icon"></div>
-					<time datetime="{{ item.date.toDate().toISOString() }}"><a href="{{ url_for(item.path) }}">{{
-						item.date.format(config.date_format) }}</a></time>
+                <div class="article__header__meta">
+                    <time class="article__header__meta__time" datetime="{{ item.date.toDate().toISOString() }}">
+                        <a href="{{ url_for(item.path) }}">{{ item.date.format(config.date_format) }}</a>
+                    </time>
 				</div>
 				{% if item.link %}
 				{% if item.title %}
-				<h1 class="title link"><a href="{{ url_for(item.link) }}" target="_blank">{{ item.title }}</a></h1>
+                <h1 class="article__header__title link"><a href="{{ url_for(item.link) }}" target="_blank">{{ item.title }}</a></h1>
 				{% else %}
-				<h1 class="title link"><a href="{{ url_for(item.link) }}" target="_blank">{{ item.link }}</a></h1>
+                <h1 class="article__header__title link"><a href="{{ url_for(item.link) }}" target="_blank">{{ item.link }}</a></h1>
 				{% endif %}
 				{% else %}
-				<h1 class="title"><a href="{{ url_for(item.path) }}">{{ item.title }}</a></h1>
+                <h1 class="article__header__title"><a href="{{ url_for(item.path) }}">{{ item.title }}</a></h1>
 				{% endif %}
 			</header>
 		</div>

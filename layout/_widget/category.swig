@@ -1,5 +1,5 @@
 {% if site.categories.length %}
-<div class="widget tag category">
+<div class="widget widget_type_category">
 	<h2 class="archive-title">{{ __('category') }}</h2>
 	<ul class="entry">
 		{% for category in site.categories.sort('name')%}

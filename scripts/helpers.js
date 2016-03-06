@@ -1,8 +1,11 @@
 'use strict';
 
-const fs = require('fs');
+var fs   = require('fs');
+var path = require('path');
+
+var filePath = path.join(__dirname, '../source/css/style.css');
 
 hexo.extend.helper.register('inlineCss', function (name) {
-    const style = fs.readFileSync('./public/css/style.css', 'utf8');
+    var style = fs.readFileSync(filePath, 'utf8');
     return style;
 });

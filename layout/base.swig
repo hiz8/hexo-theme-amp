@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ⚡>
+<html ⚡ lang="{{config.language}}">
 <head>
     <meta charset="utf-8">
     
@@ -26,13 +26,14 @@
     
     {% if theme.favicon %}
     <link rel="icon" type="image/x-icon" href="{{ theme.favicon }}">
-    {% endif %}
+    {% endif %} 
     
     {% if is_post() %} 
     {% block jsonld %}{% endblock %}
     {% endif %}
     
-    <style>body {opacity: 0}</style><noscript><style>body {opacity: 1}</style></noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
@@ -47,7 +48,21 @@
     {% include '_partial/footer.swig' %}
 
     {% if theme.google_analytics %}
-    <amp-pixel src="https://ssl.google-analytics.com/collect?v=1&tid={{ theme.google_analytics }}&t=pageview&cid=RANDOM&dt=TITLE&dl=CANONICAL_URL&z=RANDOM"></amp-pixel>
+    <amp-analytics type="googleanalytics" id="analytics1">
+        <script type="application/json">
+            {
+                "vars": {
+                    "account": "{{ theme.google_analytics }}"
+                },
+                "triggers": {
+                    "trackPageview": {
+                        "on": "visible",
+                        "request": "pageview"
+                    }
+                }
+            }
+        </script>
+    </amp-analytics>
     {% endif %}
 </body>
 </html>

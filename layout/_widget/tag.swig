@@ -1,5 +1,5 @@
 {% if site.tags.length %}
-<div class="widget tag">
+<div class="widget widget_type_tag">
 	<h2 class="archive-title">{{ __('tag') }}</h2>
 	<ul class="entry">
 		{% for tag in site.tags.sort('name') %}
