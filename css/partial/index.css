@@ -1,1 +1,0 @@
-@charset 'UTF-8';#pagination{font-size:1.4rem}#pagination a{font-weight:700;display:inline-block}#pagination .prev{float:left}#pagination .prev:before{display:inline-block;margin-right:.5rem;content:'«';text-align:center}#pagination .next{float:right}#pagination .next:after{display:inline-block;margin-left:.5rem;content:'»';text-align:center}
