@@ -1,5 +1,7 @@
+# Header
 menu:
   home: /
   archive: /archives
 
-google_analytics: UA-12345678-1
+# Miscellaneous
+google_analytics: 

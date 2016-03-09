@@ -1,9 +1,9 @@
 hexo-theme-amp
 ==============
 
-A simple Hexo template on AMP ⚡ HTML.
+A simple [Hexo](https://hexo.io/) template on AMP ⚡ HTML.
 
-[DEMO](http://hirofumii.github.io/hexo-theme-amp/)
+- [Preview](http://hirofumii.github.io/hexo-theme-amp/)
 
 
 Features
@@ -25,7 +25,39 @@ AMP HTML is a way to build web pages for static content that render with reliabl
 Installation
 ------------
 
+### Install
+
+```bash
+$ git clone https://github.com/hirofumi1987/hexo-theme-amp.git themes/amp
 ```
-git clone https://github.com/hirofumi1987/hexo-theme-amp.git themes/amp
-npm install hexo-renderer-sass --save
+
+### Enable
+
+Modify theme setting in _config.yml to amp.
+
+
+### Update
+
+
+```bash
+$ cd themes/amp
+$ git pull
 ```
+
+
+Configuration
+-------------
+
+```yml
+# Header
+menu:
+  home: /
+  archive: /archives
+
+# Miscellaneous
+  google_analytics: 
+
+```
+
+- **menu** - Navigation menu
+- **google_analytics** - Google Analytics ID
