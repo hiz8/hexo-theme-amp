@@ -5,6 +5,8 @@ A simple [Hexo](https://hexo.io/) template on AMP ⚡ HTML.
 
 - [Preview](http://hirofumii.github.io/hexo-theme-amp/)
 
+![hexo-theme-amp-screenshot](https://raw.githubusercontent.com/hirofumii/hexo-theme-amp/images/screenshot_01.png)
+
 
 Features
 --------
