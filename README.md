@@ -5,7 +5,7 @@ A simple [Hexo](https://hexo.io/) template on AMP ⚡ HTML.
 
 - [Preview](http://hirofumii.github.io/hexo-theme-amp/)
 
-![hexo-theme-amp-screenshot](https://raw.githubusercontent.com/hirofumii/hexo-theme-amp/images/screenshot_01.png)
+<img scr="https://raw.githubusercontent.com/hirofumii/hexo-theme-amp/images/screenshot_01.png" alt="hexo-theme-amp-screenshot" width="500" />
 
 
 Features
@@ -57,7 +57,7 @@ menu:
   archive: /archives
 
 # Miscellaneous
-  google_analytics: 
+google_analytics: 
 
 ```
 
