@@ -30,7 +30,7 @@ Installation
 ### Install
 
 ```bash
-$ git clone https://github.com/hirofumi1987/hexo-theme-amp.git themes/amp
+$ git clone https://github.com/hirofumii/hexo-theme-amp.git themes/amp
 ```
 
 ### Enable
