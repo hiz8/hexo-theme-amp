@@ -12,9 +12,9 @@
             "headline": "{{ page.title }}",
             "image": {
                 "@type": "ImageObject",
-                "url": "{{ config.url }}/img/icon/700.png",
-                "height": 700,
-                "width": 700
+                "url": "{{ theme.schema.image.url }}",
+                "width": {{ theme.schema.image.width }},
+                "height": {{ theme.schema.image.height }}
             },
             "author": {
                 "@type": "Person",
@@ -22,16 +22,16 @@
             },
             "publisher": {
                 "@type": "Organization",
-                "name": "{{ config.author }}",
+                "name": "{{ theme.schema.publisher.name }}",
                 "logo": {
                     "@type": "ImageObject",
-                    "url": "{{ config.url }}/img/icon/700.png",
-                    "height": 700,
-                    "width": 700
+                    "url": "{{ theme.schema.publisher.logo.url }}",
+                    "width": {{ theme.schema.publisher.logo.width }},
+                    "height": {{ theme.schema.publisher.logo.height }}
                 }
             },
             "datePublished": "{{ page.date.toDate().toISOString() }}",
-            "dateModified": "{{ page.updated.toDate().toISOString() }}",
+            "dateModified": "{{ page.updated.toDate().toISOString() }}"
         }
     </script>
 {% endblock %}

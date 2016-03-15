@@ -59,7 +59,21 @@ menu:
 # Miscellaneous
 google_analytics: 
 
+# Article schema
+# https://developers.google.com/structured-data/rich-snippets/articles#article_markup_properties
+schema:
+  image:
+    url: /img/700.png
+    height: 700 
+    width: 700 # <= 696
+  publisher:
+    name: Yourpublisher
+    logo:
+      url: /img/700.png
+      width: 600 # <= 600
+      height: 60 # >= 60
 ```
 
 - **menu** - Navigation menu
 - **google_analytics** - Google Analytics ID
+- **schema** - Article markup properties
