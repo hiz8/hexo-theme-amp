@@ -7,4 +7,9 @@
 
 {% include '_partial/pagination.swig' %}
 
+{% if page.archive && !page.year %}
+    {% include '_widget/category.swig' %}
+    {% include '_widget/tag.swig' %}
+{% endif%}
+
 {% endblock %}

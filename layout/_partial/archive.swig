@@ -1,7 +1,5 @@
-{% if page.archive && !page.year %}
+{% if page.archive && !page.year && page.prev === 0 %}
 	{% include '../_widget/search.swig' %}
-	{% include '../_widget/category.swig' %}
-	{% include '../_widget/tag.swig' %}
 {% endif%}
 
 <div class="archive">
@@ -39,5 +37,4 @@
 		</div>
 	</article>
 	{% endfor %}
-
 </div>
