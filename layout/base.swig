@@ -18,6 +18,7 @@
     <link rel="canonical" href="{{ url_for(url) }}">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<meta name="description" content="{{ config.description }}">
+    <meta name="author" content="{{ config.author }}">
     
     <style amp-custom>
         {% set styles = inlineCss(style.css) %}

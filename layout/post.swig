@@ -4,13 +4,34 @@
     <script type="application/ld+json">
         {
             "@context": "http://schema.org",
-            "@type": "NewsArticle",
+            "@type": "BlogPosting",
+            "mainEntityOfPage":{
+                "@type":"WebPage",
+                "@id":"{{ config.url }}"
+            },
             "headline": "{{ page.title }}",
+            "image": {
+                "@type": "ImageObject",
+                "url": "{{ config.url }}/img/icon/700.png",
+                "height": 700,
+                "width": 700
+            },
             "author": {
                 "@type": "Person",
                 "name": "{{ config.author }}"
             },
-            "datePublished": "{{ page.date.toDate().toISOString() }}"
+            "publisher": {
+                "@type": "Organization",
+                "name": "{{ config.author }}",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "{{ config.url }}/img/icon/700.png",
+                    "height": 700,
+                    "width": 700
+                }
+            },
+            "datePublished": "{{ page.date.toDate().toISOString() }}",
+            "dateModified": "{{ page.updated.toDate().toISOString() }}",
         }
     </script>
 {% endblock %}
