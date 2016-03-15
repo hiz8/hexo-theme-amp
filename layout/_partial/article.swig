@@ -20,4 +20,5 @@
 	    {% include 'post/category.swig' %}
 	    {% include 'post/tag.swig' %}
 	</footer>
+    {% include 'post/pagination.swig' %}
 </article>
