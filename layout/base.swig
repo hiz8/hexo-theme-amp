@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ⚡ lang="{{config.language}}">
+<html amp lang="{{config.language}}">
 <head>
     <meta charset="utf-8">
     
