@@ -22,7 +22,7 @@
     
     <style amp-custom>
         {% set styles = inlineCss(style.css) %}
-        {{ styles }}
+        {{ styles | replace('@charset "UTF-8";', '', 'g') }}
     </style>
     
     {% if theme.favicon %}
