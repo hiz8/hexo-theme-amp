@@ -8,11 +8,11 @@ hexo.extend.filter.register('after_post_render', function (data) {
     function getAttributeValue(tag, attribute) {
         var regex = new RegExp('\\b' + attribute + '="([^"]*)"', 'i');
         var match = tag.match(regex);
-        return '\t' + attribute + '="' + (match ? match[1] : '') + '"\n';
+        return ' ' + attribute + '="' + (match ? match[1] : '') + '"';
     }
     
     data.content = data.content.replace(regex_img, function ($0) {
-        var xml = '<amp-img ';
+        var xml = '<amp-img layout="responsive"';
         xml += getAttributeValue($0, 'width');
         xml += getAttributeValue($0, 'height');
         xml += getAttributeValue($0, 'src');
