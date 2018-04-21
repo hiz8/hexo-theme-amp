@@ -3,6 +3,9 @@ menu:
   home: /
   archive: /archives
 
+# Content
+lightbox: true
+
 # Miscellaneous
 google_analytics: 
 

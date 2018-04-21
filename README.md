@@ -17,6 +17,15 @@ Features
 
 AMP HTML is a way to build web pages for static content that render with reliable, fast performance. 
 
+
+### Image lightbox
+
+hexo-amp uses [amp-image-lightbox](https://ampbyexample.com/components/amp-image-lightbox/) to showcase your photos. You can use lightbox tag plugin to add your photos.
+
+```html
+{% lightbox /path/to/image width height [title] %}
+```
+
 ### Languages
 
 - en

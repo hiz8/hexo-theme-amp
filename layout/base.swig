@@ -36,6 +36,9 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    {% if theme.lightbox %}
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    {% endif %}
 </head>
 <body>
     {% include '_partial/header.swig' %}
@@ -47,6 +50,10 @@
     </main>
 
     {% include '_partial/footer.swig' %}
+
+    {% if theme.lightbox %}
+    <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
+    {% endif %}
 
     {% if theme.google_analytics %}
     <amp-analytics type="googleanalytics" id="analytics1">
