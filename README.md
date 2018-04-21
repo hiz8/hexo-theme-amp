@@ -3,7 +3,7 @@ hexo-theme-amp
 
 A simple [Hexo](https://hexo.io/) template on AMP ⚡ HTML.
 
-- [Preview](http://hirofumii.github.io/hexo-theme-amp/)
+- [Preview](https://hirofumii.github.io/hexo-theme-amp/)
 
 <img src="https://raw.githubusercontent.com/hirofumii/hexo-theme-amp/images/screenshot_01.png" alt="hexo-theme-amp-screenshot" width="500" />
 
