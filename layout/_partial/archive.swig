@@ -21,7 +21,7 @@
 			<header>
                 <div class="article__header__meta">
                     <time class="article__header__meta__time" datetime="{{ item.date.toDate().toISOString() }}">
-                        <a href="{{ url_for(item.path) }}">{{ item.date.format(config.date_format) }}</a>
+                        {{ item.date.format(config.date_format) }}
                     </time>
 				</div>
 				{% if item.link %}
