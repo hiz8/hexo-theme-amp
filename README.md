@@ -65,6 +65,9 @@ menu:
   home: /
   archive: /archives
 
+# Content
+lightbox: true
+
 # Miscellaneous
 google_analytics: 
 
@@ -84,5 +87,6 @@ schema:
 ```
 
 - **menu** - Navigation menu
+- **lightbox** - Enable [amp-image-lightbox](https://ampbyexample.com/components/amp-image-lightbox/)
 - **google_analytics** - Google Analytics ID
 - **schema** - Article markup properties
