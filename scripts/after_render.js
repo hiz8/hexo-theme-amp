@@ -1,18 +1,20 @@
 'use strict';
 
-hexo.extend.filter.register('after_post_render', function (data) {
+hexo.extend.filter.register('after_post_render', data => {
     
-    var regex_img = /<img .*?>/gi;
-    var regex_rel  = /rel="external"/g;
+    const regex_img = /<img .*?>/gi;
+    const regex_rel  = /rel="external"/g;
     
     function getAttributeValue(tag, attribute) {
-        var regex = new RegExp('\\b' + attribute + '="([^"]*)"', 'i');
-        var match = tag.match(regex);
+        const regex = new RegExp('\\b' + attribute + '="([^"]*)"', 'i');
+        const match = tag.match(regex);
+
         return ' ' + attribute + '="' + (match ? match[1] : '') + '"';
     }
     
-    data.content = data.content.replace(regex_img, function ($0) {
-        var xml = '<amp-img layout="responsive"';
+    data.content = data.content.replace(regex_img, $0 => {
+        let xml = '<amp-img on="tap:lightbox1" role="button" tabindex="0" layout="responsive"';
+
         xml += getAttributeValue($0, 'width');
         xml += getAttributeValue($0, 'height');
         xml += getAttributeValue($0, 'src');
