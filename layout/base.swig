@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html amp lang="{{config.language}}">
+<html amp lang="{% if config.language %}{{ config.language }}{% endif %}">
 <head>
     <meta charset="utf-8">
     
@@ -14,11 +14,33 @@
     {% set title = 'Tag: ' + page.tag %}
     {% endif %}
     
-    <title>{% if title %}{{ title }} - {% endif %}{{ config.title }}</title>
-    <link rel="canonical" href="{{ url_for(url) }}">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-	<meta name="description" content="{{ config.description }}">
+    <title>{% if title %}{{ title }}{% if page.current > 1 %}: {{ page.current }}{% endif %} - {% endif %}{{ config.title }}</title>
+
+    {% if is_post() %}
+    <link rel="canonical" href="{{ url_for(page.permalink) }}">
+    {% else %}
+    <link rel="canonical" href="{{ url_for(page.current_url) }}">
+    {% endif %}
+
+    {% if page.current > 1 %}
+    <meta name="robots" content="noindex">
+    {% endif %}
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+
+    {% if page.description %}
+	<meta name="description" content="{{ page.description }}">
+    {% elseif page.excerpt %}
+    <meta name="description" content="{{ strip_html(page.excerpt) | trim }}">
+    {% elseif page.content %}
+    <meta name="description" content="{{ strip_html(page.content) | trim | replace('\n', ' ') | truncate(150, '') }}">
+    {% elseif config.description and is_home() and page.current == 1 %}
+    <meta name="description" content="{{ config.description }}">
+    {% endif %}
+
+    {% if config.author %}
     <meta name="author" content="{{ config.author }}">
+    {% endif %}
     
     <style amp-custom>
         {% set styles = inlineCss(style.css) %}
@@ -36,6 +58,7 @@
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+
     {% if theme.lightbox %}
     <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
     {% endif %}
