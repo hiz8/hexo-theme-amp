@@ -16,13 +16,7 @@
     
     <title>{% if title %}{{ title }}{% if page.current > 1 %}: {{ page.current }}{% endif %} - {% endif %}{{ config.title }}</title>
 
-    {% if is_post() %}
-    <link rel="canonical" href="{{ url_for(page.permalink) }}">
-    {% else %}
-    <link rel="canonical" href="{{ url_for(page.current_url) }}">
-    {% endif %}
-
-    {% if page.current > 1 %}
+    {% if page.current > 1 or is_archive() or is_year() or is_month() or is_category() or is_tag() %}
     <meta name="robots" content="noindex">
     {% endif %}
 
@@ -40,6 +34,12 @@
 
     {% if config.author %}
     <meta name="author" content="{{ config.author }}">
+    {% endif %}
+
+    {% if is_post() %}
+    <link rel="canonical" href="{{ url_for(page.permalink) }}">
+    {% else %}
+    <link rel="canonical" href="{{ url_for(page.current_url) }}">
     {% endif %}
     
     <style amp-custom>
