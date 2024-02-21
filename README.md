@@ -3,9 +3,9 @@ hexo-theme-amp
 
 A simple [Hexo](https://hexo.io/) template on AMP ⚡ HTML.
 
-- [Preview](https://hirofumii.github.io/hexo-theme-amp/)
+- [Preview](https://hiz8.github.io/hexo-theme-amp/)
 
-<img src="https://raw.githubusercontent.com/hirofumii/hexo-theme-amp/images/screenshot_01.png" alt="hexo-theme-amp-screenshot" width="500" />
+<img src="https://raw.githubusercontent.com/hiz8/hexo-theme-amp/images/screenshot_01.png" alt="hexo-theme-amp-screenshot" width="500" />
 
 
 Features
@@ -39,7 +39,7 @@ Installation
 ### Install
 
 ```bash
-$ git clone https://github.com/hirofumii/hexo-theme-amp.git themes/amp
+$ git clone https://github.com/hiz8/hexo-theme-amp.git themes/amp
 ```
 
 ### Enable
